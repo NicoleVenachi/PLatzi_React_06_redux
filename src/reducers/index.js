@@ -8,6 +8,25 @@ const reducer = (state, action) => {
         ...state,
         myList: [...state.myList, action.payload]
       }
+    
+    case 'DELETE_FAVORITE':
+      return {
+        ...state,
+        //regresa elementos que sean diferentes al payload
+        myList: state.myList.filter(item => item.id !== action.payload)
+      }
+    
+    case 'LOGIN_REQUEST':
+      return {
+        ...state,
+        user: action.payload
+      }
+    
+    case 'LOGOUT_REQUEST':
+      return {
+        ...state,
+        user: action.payload
+      }
   
     default:
       return state;

@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Home from '../containers/Home'
 import { Layout } from '../containers/Layout'
-import { Login } from '../containers/Login'
+import Login from '../containers/Login'
 import { NotFound } from '../containers/NotFound'
 import { Registro } from '../containers/Registro'
 
