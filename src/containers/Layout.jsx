@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 function Layout({ children }) {
   return (
     <div className='App'>
-      <Header />
+      {/* <Header /> */}
       {children}
       <Footer />
     </div>

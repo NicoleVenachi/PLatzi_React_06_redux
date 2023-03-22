@@ -4,7 +4,8 @@ import Home from '../containers/Home'
 import { Layout } from '../containers/Layout'
 import Login from '../containers/Login'
 import { NotFound } from '../containers/NotFound'
-import { Registro } from '../containers/Registro'
+import Player from '../containers/Player'
+import Registro from '../containers/Registro'
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/login" component={Login}/>
         <Route exact path="/register" component={Registro}/>
+        <Route exact path="/player/:id" component={Player}/>
         <Route component={NotFound}/>
 
       </Switch>

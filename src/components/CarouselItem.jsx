@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import { setFavorite, deleteFavorite } from '../actions';
 
@@ -30,7 +32,12 @@ const CarouselItem = (props) => {
       <img className="carousel-item__img" src={cover} alt={title} />
       <div className="carousel-item__details">
         <div>
-          <img className="carousel-item__details--img" src={playIcon} alt="Play Icon" />
+          <Link to={`/player/${id}`}>
+            <img className="carousel-item__details--img"
+              src={playIcon}
+              alt="Play Icon"
+            />
+          </Link>
           {
             //si el componente es una lista (myLisst), renderiza delte, sino plus
             !!(props.isList) ?
